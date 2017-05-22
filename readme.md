@@ -7,10 +7,15 @@ All files and directories within the `/storage` and the `/bootstrap/cache` direc
 
 ### Configuration
 The app is configured to write to a SQLite file in `/storage/db.sqlite`. 
-Edit the `/.env` file and set the full path to this sqlite file:
+Copy the `/.env.example` file to `/.env` and set the full path to this sqlite file:
 `DB_DATABASE=/full_path_to_project_root/storage/db.sqlite`
 
 In the future if you wanted to use something like MySQL or SQL Server all you'd have to do is update the db settings in the config file and then run the db migration scripts.
+
+Create a new app key in your .env file with:
+```
+php artisan key:generate
+```
 
 ### Composer
 Run `composer install` to pull in all dependencies
