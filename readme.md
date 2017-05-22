@@ -2,20 +2,19 @@
 
 ## Installation
 
-### Configuration
-The app is configured to write to a SQLite file in `/storage/db.sqlite`. 
-Copy the `/.env.example` file to `/.env` and set the full path to this sqlite file:
-`DB_DATABASE=/full_path_to_project_root/storage/db.sqlite`
-
-In the future if you wanted to use something like MySQL or SQL Server all you'd have to do is update the db settings in the config file and then run the db migration scripts.
-
-Create a new app key in your .env file with:
-```
-php artisan key:generate
-```
-
 ### Composer
 Run `composer install` to pull in all dependencies
+
+### Configuration
+1. In the project root dir, copy the `.env.example` file to `.env`
+2. The app is configured to write to a SQLite file in `storage/db.sqlite`.
+ Edit your `.env` file set the full path to this sqlite file:
+`DB_DATABASE=/full_path_to_project_root/storage/db.sqlite`
+In the future if you wanted to use something like MySQL or SQL Server all you'd have to do is update the db settings in the config file and then run the db migration scripts.
+3. Create a new app key. This should generate the key and save it to your `.env` file:
+    ```
+    php artisan key:generate
+    ```
 
 ### Web Server
 You can either serve the app either by:
