@@ -2,9 +2,6 @@
 
 ## Installation
 
-### Directory Permissions
-
-
 ### Configuration
 The app is configured to write to a SQLite file in `/storage/db.sqlite`. 
 Copy the `/.env.example` file to `/.env` and set the full path to this sqlite file:
