@@ -3,7 +3,7 @@
 ## Installation
 
 ### Directory Permissions
-All files and directories within the `/storage` and the `/bootstrap/cache` directories should be made writable by your web server.
+
 
 ### Configuration
 The app is configured to write to a SQLite file in `/storage/db.sqlite`. 
@@ -28,7 +28,8 @@ From the project root directory, run:
     php artisan serve
     ```
 2. Using Apache or Nginx:
-Configure your web server's document root to be the /public directory. 
+* Configure your web server's document root to be the /public directory. 
+* All files and directories within the `/storage` and the `/bootstrap/cache` directories should be made writable by your web server.
 
 ### Data
 If you ever want to reset the SQLite file to a pristine state, run this from the project root directory:
